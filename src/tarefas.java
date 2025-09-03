@@ -1,23 +1,24 @@
 import java.util.Scanner;
+import java.util.ArrayList;
 
 public class tarefas {
+    // se completa ou nao
+    private boolean completa;
 
-    boolean completa;
+    // nome da tarefa
+   private String titulo;
 
-    void criartarefa(){
-        System.out.println("adicione sua tarefa");
-    }
-    Scanner escreva = new Scanner(System.in);
+   public tarefas(String titulo){
+       this.titulo=titulo;
+       this.completa = false;
+   }
 
-    String tarefa= escreva.nextLine();
+   String getTitulo(){
+       return titulo;
+   }
 
-    void retorno(){
-        System.out.println("a tarefa " + tarefa + "foi adicionada");
-    }
-
-    String tituloDaTarefa;
-
-    public tarefas(String tituloDaTarefa) {
-        this.tituloDaTarefa = tituloDaTarefa;
-    }
 }
+
+
+
+
