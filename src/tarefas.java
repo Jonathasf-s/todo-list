@@ -13,10 +13,13 @@ public class tarefas {
        this.completa = false;
    }
 
-   String getTitulo(){
-       return titulo;
-   }
+    public tarefas() {
+    }
 
+    public tarefas(boolean completa, String titulo) {
+        this.completa = completa;
+        this.titulo = titulo;
+    }
 }
 
 

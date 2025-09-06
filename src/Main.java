@@ -22,7 +22,7 @@ int NumUsuario;
 
             NumUsuario = escreva.nextInt();
 
-            //Todo é nescessario cirar uma forma de mostrar tudo o q sera registrado na classe Tarefas
+            //Todo  ...  é nescessario cirar uma forma de mostrar tudo o q sera registrado na classe Tarefas
 
 
             switch (NumUsuario) {
