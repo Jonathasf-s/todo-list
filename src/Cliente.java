@@ -3,7 +3,7 @@ public class Cliente {
     private String nome;
     private String Cpf;
     private int idade;
-
+    // vejamos se vai
     void Mensagem(){
         System.out.println("escreva seu objetivo");
     }
