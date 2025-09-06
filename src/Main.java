@@ -19,7 +19,7 @@ int NumUsuario;
             System.out.println("2. adicionar tarefa a lista");
             System.out.print("Escolha uma opção: ");
             System.out.println("digite um numero");
-a
+
             NumUsuario = escreva.nextInt();
 
             //Todo  ...  é nescessario cirar uma forma de mostrar tudo o q sera registrado na classe Tarefas
