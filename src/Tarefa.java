@@ -8,16 +8,16 @@ public class Tarefa {
     private final int id;   //Método final para se tornar imutável
     private String titulo;
     private String descricao;
-    private boolean completa;
+    private boolean situacao;
     private LocalDateTime dataCriacao;
 
     // Construtor
     public Tarefa(String titulo, String descricao) {
-        this.id = contador; // incrementa e atribui automaticamente
-        ++contador;
+        this.id = contador;
+        contador++;
         this.titulo = titulo;
         this.descricao = descricao;
-        this.completa = false; // por padrão, inicia como não concluída
+        this.situacao = false; // por padrão, inicia como não concluída
         this.dataCriacao = LocalDateTime.now();
     }
 
@@ -35,8 +35,8 @@ public class Tarefa {
         return descricao;
     }
 
-    public boolean isCompleta() {
-        return completa;
+    public boolean getSituacao() {
+        return situacao;
     }
 
     public LocalDateTime getDataCriacao() {
@@ -44,7 +44,7 @@ public class Tarefa {
     }
 
 
-    // Setters (somente atributos mutáveis)
+    // Setters
     public void setTitulo(String titulo) {
         this.titulo = titulo;
     }
@@ -53,11 +53,12 @@ public class Tarefa {
         this.descricao = descricao;
     }
 
-    public void setCompleta(boolean completa) {
-        this.completa = completa;
-    }
-
     public void setDataCriacao(LocalDateTime dataCriacao) {
         this.dataCriacao = dataCriacao;
+    }
+
+    // Método utilitário
+    public void setSituacao(boolean situacao) {
+        this.situacao = situacao;
     }
 }
