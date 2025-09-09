@@ -1,35 +1,30 @@
-import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Main {
-
-    static ArrayList<Tarefa> minhaListaDeTarefas = new ArrayList<>();
     static Scanner leitorDeTeclado = new Scanner(System.in);
-
 
     public static void main(String[] args) {
         int opcaoDoUsuario = 0;
         System.out.println("Bem-vindo à sua Lista de Tarefas Pessoal!");
 
-        // O loop principal que gerencia o menu
         while (opcaoDoUsuario != 5) {
-            exibirMenu(); // Chama a função que mostra o menu
+            //  ==== MENU ====
 
             opcaoDoUsuario = leitorDeTeclado.nextInt();
             leitorDeTeclado.nextLine();
 
             switch (opcaoDoUsuario) {
                 case 1:
-                    adicionarTarefa();
+                    // Função de adição de tarefa
                     break;
                 case 2:
-                    listarTarefas();
+                    // Função de listar tarefas
                     break;
                 case 3:
-                    marcarTarefaComoConcluida();
+                    // Função de marcar como concluída
                     break;
                 case 4:
-                    removerTarefa();
+                    // Função de remover tarefa
                     break;
                 case 5:
                     System.out.println("Até a próxima! Mantenha a organização!");
@@ -40,5 +35,4 @@ public class Main {
             }
         }
     }
-
-
+}
