@@ -1,43 +1,44 @@
-import java.util.Scanner;
 import java.util.ArrayList;
+import java.util.Scanner;
 
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
+
+    static ArrayList<Tarefa> minhaListaDeTarefas = new ArrayList<>();
+    static Scanner leitorDeTeclado = new Scanner(System.in);
+
+
     public static void main(String[] args) {
+        int opcaoDoUsuario = 0;
+        System.out.println("Bem-vindo à sua Lista de Tarefas Pessoal!");
 
-int NumUsuario;
-        Scanner escreva = new Scanner(System.in);
+        // O loop principal que gerencia o menu
+        while (opcaoDoUsuario != 5) {
+            exibirMenu(); // Chama a função que mostra o menu
 
-        // foi criado um pequenho menu
-        // objetivo adicionar uma tarefa
+            opcaoDoUsuario = leitorDeTeclado.nextInt();
+            leitorDeTeclado.nextLine();
 
-        do {
-
-            System.out.println("\n===== Menu da LISTA DE AFAZERES =====");
-            System.out.println("1. Ver conteudo da lista");
-            System.out.println("2. adicionar tarefa a lista");
-            System.out.print("Escolha uma opção: ");
-            System.out.println("digite um numero");
-// vejamos se vai
-            NumUsuario = escreva.nextInt();
-
-            //Todo  ...  é nescessario cirar uma forma de mostrar tudo o q sera registrado na classe Tarefas
-
-
-            switch (NumUsuario) {
-
+            switch (opcaoDoUsuario) {
                 case 1:
-                    System.out.println("vc escolheu ver conteudo:");
+                    adicionarTarefa();
                     break;
                 case 2:
-                    System.out.println("vc escolheu registrar tarefas");
+                    listarTarefas();
+                    break;
+                case 3:
+                    marcarTarefaComoConcluida();
+                    break;
+                case 4:
+                    removerTarefa();
+                    break;
+                case 5:
+                    System.out.println("Até a próxima! Mantenha a organização!");
+                    break;
+                default:
+                    System.out.println("Opção inválida, por favor, escolha um número do menu.");
                     break;
             }
         }
-        while (NumUsuario > 2 || NumUsuario == 0 );
-
-
-        escreva.close();
-        }
     }
+
+
